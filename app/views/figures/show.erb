@@ -1,0 +1,9 @@
+<h1>Figure Show</h1>
+<%= @figure.name %>
+<% @figure.titles.each do |title| %>
+  <%=title.name %>
+<% end %>
+
+<% @figure.landmarks.each do |landmark| %>
+  <%=landmark.name %>
+<% end %>

@@ -13,3 +13,4 @@ gem 'rspec'
 gem 'rack-test'
 gem 'sinatra-twitter-bootstrap', :require => 'sinatra/twitter-bootstrap'
 gem 'capybara'
+gem 'sinatra-fix_951', require: 'sinatra/fix_951' #desn't seem to help for this one
