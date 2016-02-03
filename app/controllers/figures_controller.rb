@@ -11,6 +11,7 @@ class FiguresController < ApplicationController
   end
 
   get '/figures/:id' do
+
     @figure = Figure.find(params[:id])
     erb :show
   end
@@ -47,8 +48,12 @@ class FiguresController < ApplicationController
 
   patch '/figures/:id' do #need to finish this update
     @figure = Figure.find(params[:id])
-
-    redirect '/figures/#{@figure.id}'
+    @figure.update(name: params[:figure][:name])
+    @figure.landmarks.build(name: params[:landmark][:name])
+    @figure.save
+    @figure.titles.build(name: params[:title][:name])
+    @figure.save
+    redirect "/figures/#{@figure.id}"
   end
 
 

@@ -20,6 +20,7 @@ TODO
 
 
 
+
 Your form for a new figure should dynamically generate checkboxes out of the available landmarks and titles. 
 
 It should also have fields for creating a new landmark and/or a new title. 
